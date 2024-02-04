@@ -1,1 +1,45 @@
 /*  your css code here. If applicable */
+  body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #thumbnailGrid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        #fullsize {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #fullsize img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .closeButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 20px;
+        }
